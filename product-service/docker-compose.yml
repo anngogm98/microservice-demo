@@ -1,0 +1,12 @@
+version: '1.0'
+services:
+  mongodb:
+    image: mongo
+    restart: always
+    tty: true
+    env_file:
+      - mongodb.env
+    volumes:
+      - ./mongodb:/data/db
+    ports:
+      - "27017:27017"
